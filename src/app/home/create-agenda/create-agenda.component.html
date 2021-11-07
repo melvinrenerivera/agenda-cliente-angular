@@ -1,0 +1,68 @@
+<div class="container">
+    <h1>Create new Agenda</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form autocomplete="off" [formGroup]="form">
+              <p>
+                <mat-form-field appearance="fill" class="d-block">
+                    <mat-label>Nombres</mat-label>
+                    <input type="text" 
+                    matInput 
+                    formControlName="nombres">
+                </mat-form-field>
+              </p>
+              <p>
+                  <mat-form-field appearance="fill" class="d-block">
+                      <mat-label>apellidos</mat-label>
+                      <input type="text" matInput formControlName="apellidos">
+                  </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field appearance="fill" class="d-block">
+                    <mat-label>Fehca de nacimiento</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="fechaNac">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+              </p>
+              <p>
+                  <mat-form-field appearance="fill" class="d-block">
+                      <mat-label>telefono</mat-label>
+                      <input type="text" matInput formControlName="telefono">
+                  </mat-form-field>
+              </p>
+              <p>
+                  <mat-form-field appearance="fill" class="d-block">
+                      <mat-label>celular</mat-label>
+                      <input type="text" matInput="celular">
+                  </mat-form-field>
+              </p>
+              <p>
+                  <mat-form-field appearance="fill" class="d-block">
+                      <mat-label>email</mat-label>
+                      <input type="text" matInput formControlName="email">
+                  </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field appearance="fill" class="d-block">
+                    <mat-label>sexo</mat-label>
+                    <mat-select formControlName="sexo" required>
+                      <mat-option value="M">M</mat-option>
+                      <mat-option value="F">F</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </p>
+              <p>
+                  <mat-form-field appearance="fill" class="d-block">
+                      <mat-label>direccion</mat-label>
+                      <input type="text" matInput formControlName="direccion">
+                  </mat-form-field>
+              </p>
+              <div class="mb-5 justify-content-end pull-right" >
+                  <button mat-raised-button [routerLink]="['/']" routerLinkActive="router-link-active" >Cancelar</button>
+                  <button (click)="save()" type="submit" class="d-inline" mat-raised-button color="primary">Crear Agenda</button>
+              </div>
+            </form>
+        </div>
+    </div>
+</div>
