@@ -46,3 +46,6 @@ $agendac-angular-liente-theme: mat.define-light-theme((
 @import "~bootstrap/scss/utilities"; // Configures the utility classes that should be generated
 @import "~bootstrap/scss/utilities/api"; // Generates the actual utility classes
 
+.spacer {
+  flex: 1 1 auto;
+ }

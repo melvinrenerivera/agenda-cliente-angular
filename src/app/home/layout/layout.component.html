@@ -1,7 +1,21 @@
 <p>
     <mat-toolbar color="primary">
-      <button mat-raised-button>agendas</button>
+      <span>Mi agenda</span>
+
+        <span class="spacer"></span>
+        
+        <span class="d-flex justify-content-end">{{name}}</span>
+
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">         
+            <button mat-menu-item (click)="logout()">Logout</button>
+          </mat-menu>
+
     </mat-toolbar>
 </p>
 
 <router-outlet></router-outlet>
+
+

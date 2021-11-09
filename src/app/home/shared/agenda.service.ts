@@ -25,4 +25,9 @@ export class AgendaService {
   save(agenda:any){
     return this.http.post(`${environment.apiBase}/agenda`,agenda);
   }
+
+  delete(id:number){
+    return this.http.delete(`${environment.apiBase}/agenda/${id}`);
+  }
+
 }

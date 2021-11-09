@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="row justify-content-md-center justify-content-lg-center">
+        <h1 class="text-center">Login agenda</h1>
+        <div class="col-md-6 ">
+            <form  autocomplete="off" [formGroup]="form">
+                <p>
+                    <mat-form-field class="d-block">
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput
+                        formControlName="username">
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field class="d-block">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                    </mat-form-field>    
+                </p>
+               <p class="pull-right">
+                <button (click)="login()" type="submit"  mat-raised-button>Login</button>
+               </p>
+            </form>
+            <div *ngIf="error" class="w-bold" style="color: red;">
+                {{error}}
+            </div>
+        </div>
+    </div>
+</div>
